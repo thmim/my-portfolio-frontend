@@ -66,7 +66,7 @@ const Navbar = () => {
   </div>
   <div className="navbar-end flex gap-2">
     <a className=""><MdLightMode size={25} /></a>
-    <a className="btn bg-text-primary">Resume</a>
+    <a className="btn bg-gradient-to-r from-[#00C6FF] to-[#0072FF]">Resume</a>
   </div>
 </div>
     );
