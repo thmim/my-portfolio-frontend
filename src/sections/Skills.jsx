@@ -6,6 +6,7 @@ import {
   SiMongodb, SiExpress, SiRedux, SiTailwindcss, SiVercel, SiFirebase
 } from 'react-icons/si';
 
+// Data for the skills, can be easily updated
 const skillsData = [
   { name: "React", icon: FaReact, color: "#61DAFB" },
   { name: "Node.js", icon: FaNodeJs, color: "#68A063" },
@@ -28,23 +29,44 @@ const Skills = () => {
       className="min-h-screen flex items-center justify-center py-20 px-6 md:px-12"
       style={{ backgroundColor: "#0B1120", color: "#F8FAFC" }}
     >
-      <div className="max-w-7xl mx-auto text-center">
+      {/* Custom CSS for the floating animation */}
+      <style>
+        {`
+          @keyframes float {
+            0%, 100% {
+              transform: translateY(0);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+          }
+          .animate-float {
+            animation: float 4s ease-in-out infinite;
+          }
+        `}
+      </style>
+      
+      <div className="w-11/12 mx-auto text-center">
         {/* Main Title with Gradient */}
-        <h2 className="text-4xl md:text-5xl font-bold mb-12 bg-gradient-to-r from-[#00C6FF] to-[#0072FF] bg-clip-text text-transparent">
-          My Technical Skills
+        <h2 className="text-4xl md:text-5xl bg-gradient-to-r from-[#00C6FF] to-[#0072FF] bg-clip-text text-transparent lg:text-6xl font-bold mb-4">
+          My Skills
         </h2>
+        
+        {/* Short Description */}
         <p className="text-gray-400 mb-12 max-w-2xl mx-auto">
           Here are some of the key technologies and tools I've worked with to build full-stack web applications. My expertise lies in the MERN stack and related modern frameworks.
         </p>
-        
-        {/* Skills Grid - This creates the unique circular-like arrangement */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8">
+
+        {/* Skills Grid with Animated Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-8">
           {skillsData.map((skill, index) => (
             <div 
               key={index}
+              // Added the custom animation class and a unique delay for each card
               className="relative p-6 group flex flex-col items-center justify-center text-center 
                          bg-gray-800/50 rounded-2xl shadow-xl hover:bg-gray-700/60 transition-all 
-                         duration-300 transform hover:scale-110 cursor-pointer"
+                         duration-300 transform hover:scale-110 cursor-pointer animate-float"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Skill Icon */}
               <div 
