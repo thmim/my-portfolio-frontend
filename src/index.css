@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@600;700&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+html,body{
+  /* width: 100vh; */
+  background-color: #0B1120;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+@theme {
+   --primary-color: #0F172A;
+  --accent-color: #38BDF8;
+  --text-primary-color: #F8FAFC;
+}
