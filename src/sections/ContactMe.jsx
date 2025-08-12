@@ -1,8 +1,41 @@
-import React from "react";
+import React, { useRef } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaFileDownload, FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import emailjs from '@emailjs/browser';
+import Swal from "sweetalert2";
 
 const ContactMe = () => {
+    const form = useRef();
+    const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_hk0hbbg', 'template_rb1py1r', form.current, {
+        publicKey: '_qkJsqHxOt96nb4l4',
+      })
+      .then(
+        () => {
+          Swal.fire({
+            title: "Success!",
+            text: "Your message has been sent successfully.",
+            icon: "success",
+            confirmButtonColor: "#00C6FF",
+          });
+          form.current.reset();
+        },
+        (error) => {
+            console.log(error)
+          Swal.fire({
+            
+            title: "Error!",
+            text: "Failed to send your message. Please try again.",
+            icon: "error",
+            confirmButtonColor: "#FF4B4B",
+          });
+        },
+      );
+  };
+
   return (
     <section
       id="contact"
@@ -65,19 +98,21 @@ const ContactMe = () => {
         </motion.div>
 
         {/* Contact Form */}
-        <motion.form
+        <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           className="bg-[#111827] p-6 rounded-lg shadow shadow-cyan-500/20 space-y-4"
         >
-          {/* Name */}
+          <form ref={form} onSubmit={sendEmail}>
+            {/* Name */}
           <div>
             <label className="block mb-1 text-gray-300 font-medium">
               Your Name:
             </label>
             <input
               type="text"
+              name="from_name"
               placeholder="Enter your name"
               className="w-full p-3 rounded-lg bg-[#0B1120] border border-gray-700 focus:border-cyan-400 outline-none"
             />
@@ -90,6 +125,7 @@ const ContactMe = () => {
             </label>
             <input
               type="email"
+              name="from_email"
               placeholder="Enter your email"
               className="w-full p-3 rounded-lg bg-[#0B1120] border border-gray-700 focus:border-cyan-400 outline-none"
             />
@@ -102,19 +138,23 @@ const ContactMe = () => {
             </label>
             <textarea
               placeholder="Write your message..."
+              name="message"
               rows="5"
               className="w-full p-3 rounded-lg bg-[#0B1120] border border-gray-700 focus:border-cyan-400 outline-none"
             ></textarea>
           </div>
 
           {/* Submit Button */}
-          <button
+          <input
             type="submit"
+            value=" Send Message"
             className="w-full px-6 py-3 mt-4 bg-gradient-to-r from-[#00C6FF] to-[#0072FF] rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
           >
-            Send Message
-          </button>
-        </motion.form>
+           
+          </input>
+
+          </form>
+        </motion.div>
       </div>
     </section>
   );
