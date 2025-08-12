@@ -9,32 +9,32 @@ const Navbar = () => {
     <>
 
     <li>
-          <Link to="/" smooth={true} duration={500} activeClass="active" spy={true}>
+          <Link to="/" smooth={true} duration={600} activeClass="active" spy={true}>
             <FaHome /> Home
           </Link>
         </li>
         <li>
-          <Link to="about" smooth={true} duration={500} activeClass="active" spy={true}>
+          <Link to="about" smooth={true} duration={1600} activeClass="active" spy={true}>
             <FaUser /> About
           </Link>
         </li>
         <li>
-          <Link to="skills" smooth={true} duration={500} activeClass="active" spy={true}>
+          <Link to="skills" smooth={true} duration={1600} activeClass="active" spy={true}>
             <FaTools /> Skills
           </Link>
         </li>
         <li>
-          <Link to="projects" smooth={true} duration={500} activeClass="active" spy={true}>
+          <Link to="projects" smooth={true} duration={1600} activeClass="active" spy={true}>
             <FaLaptopCode /> Projects
           </Link>
         </li>
         <li>
-          <Link to="education" smooth={true} duration={500} activeClass="active" spy={true}>
+          <Link to="education" smooth={true} duration={1600} activeClass="active" spy={true}>
             <FaGraduationCap /> Education
           </Link>
         </li>
         <li>
-          <Link to="contact" smooth={true} duration={500} activeClass="active" spy={true}>
+          <Link to="contact" smooth={true} duration={1600} activeClass="active" spy={true}>
             <FaEnvelope /> Contact
           </Link>
         </li>

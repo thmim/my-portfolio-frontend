@@ -1,19 +1,14 @@
-import React from 'react';
-import Navbar from './sections/Navbar';
-import Hero from './sections/Hero';
-import AboutMe from './sections/AboutMe';
-import Skills from './sections/Skills';
 
+import Navbar from "./sections/Navbar";
+import Hero from "./sections/Hero";
+import AboutMe from "./sections/AboutMe";
+import Skills from "./sections/Skills";
 
-const App = () => {
+function App() {
   return (
-    <>
-      <Navbar></Navbar>
-      <Hero></Hero>
-      <AboutMe></AboutMe>
-      <Skills></Skills>
-    </>
-  );
-};
+    
+            <h1>Vite + React</h1>
+  )
+}
 
 export default App;

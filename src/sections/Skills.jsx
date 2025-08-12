@@ -3,10 +3,10 @@ import {
   FaReact, FaNodeJs, FaHtml5, FaCss3, FaJs, FaDatabase, FaGit, FaGithub
 } from 'react-icons/fa';
 import { 
-  SiMongodb, SiExpress, SiRedux, SiTailwindcss, SiVercel, SiFirebase
+  SiMongodb, SiExpress, SiTailwindcss, SiVercel, SiFirebase
 } from 'react-icons/si';
 
-// Data for the skills, can be easily updated
+// skills Data
 const skillsData = [
   { name: "React", icon: FaReact, color: "#61DAFB" },
   { name: "Node.js", icon: FaNodeJs, color: "#68A063" },
