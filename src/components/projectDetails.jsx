@@ -11,7 +11,7 @@ import project3 from "../assets/edugenix.png";
 // Project details data
 const projectDetails = {
   1: {
-    name: "Freelance Task Management Site",
+    name: "Freelance Task Management",
     techStack: [
       { name: "React", icon: <FaReact className="text-cyan-400" /> },
       { name: "Express.js", icon: <FaNodeJs className="text-green-500" /> },
@@ -25,7 +25,7 @@ const projectDetails = {
     liveLink: "https://freelance-marketplace-auth.web.app/",
     githubLink: "https://github.com/thmim/freelance-marketplace-client-repo",
     challenges:
-      "Integrating secure payment gateways, creating a real-time chat system, and managing multiple user roles.",
+      "Integrating post task and bid task and managing multiple user roles.",
     improvements:
       "Add AI-based task recommendations and advanced analytics for freelancers.",
     image: project1,
@@ -45,7 +45,7 @@ const projectDetails = {
     liveLink: "https://hotel-booking-auth-30d43.web.app",
     githubLink: "https://github.com/thmim/hotel-booking-client-repo",
     challenges:
-      "Implementing live availability updates, integrating with third-party APIs for hotel data.",
+      "Implementing live availability updates, and manage guest data , guest reviews and ratings",
     improvements:
       "Add multi-language support and personalized booking suggestions.",
     image: project2,
@@ -61,13 +61,13 @@ const projectDetails = {
       { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-300" /> },
     ],
     description:
-      "An online learning platform with courses, progress tracking, and quizzes.",
+      "An online learning platform where teacher can aplly for teacher role and teach. Also student can buy course to proper learning with progress tracking, and quizzes.",
     liveLink: "https://edugenix-e-learning-project.web.app",
     githubLink: "https://github.com/thmim/edugenix-project-client-repo",
     challenges:
-      "Managing large amounts of content and implementing a smooth video streaming experience.",
+      "Managing multiple roles and manage huge data",
     improvements:
-      "Add AI-driven personalized course recommendations and community forums.",
+      "Add AI-driven personalized course recommendations and implement quizes system.",
     image: project3,
   },
 };

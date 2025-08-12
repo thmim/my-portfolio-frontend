@@ -3,15 +3,19 @@ import { Link } from 'react-scroll';
 import { FaHome, FaUser, FaTools, FaLaptopCode, FaGraduationCap, FaEnvelope } 
 from 'react-icons/fa';
 import { MdLightMode } from 'react-icons/md';
+import { NavLink } from 'react-router';
+
+
 
 const Navbar = () => {
     const navItems = 
     <>
 
     <li>
-          <Link to="/" smooth={true} duration={600} activeClass="active" spy={true}>
+          <NavLink to="/">
             <FaHome /> Home
-          </Link>
+          </NavLink>
+          
         </li>
         <li>
           <Link to="about" smooth={true} duration={1600} activeClass="active" spy={true}>

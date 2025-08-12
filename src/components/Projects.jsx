@@ -8,7 +8,7 @@ import project3 from '../assets/edugenix.png'
 const projects = [
   {
     id: 1,
-    name: "Freelance Task Management Site",
+    name: "Freelance Task Management",
     image: project1,
   },
   {
@@ -44,7 +44,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <img src={project.image} alt={project.name} className="w-full object-cover" />
+            <img src={project.image} alt={project.name} className="w-full h-64 object-cover" />
             <div className="p-5">
               <h3 className="text-xl font-semibold mb-4">{project.name}</h3>
               <Link
