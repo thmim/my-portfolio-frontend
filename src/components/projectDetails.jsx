@@ -22,8 +22,8 @@ const projectDetails = {
     ],
     description:
       "A freelance platform where clients can post tasks, hire freelancers, and manage projects easily.",
-    liveLink: "https://example.com/freelance",
-    githubLink: "https://github.com/yourname/freelance-client",
+    liveLink: "https://freelance-marketplace-auth.web.app/",
+    githubLink: "https://github.com/thmim/freelance-marketplace-client-repo",
     challenges:
       "Integrating secure payment gateways, creating a real-time chat system, and managing multiple user roles.",
     improvements:
