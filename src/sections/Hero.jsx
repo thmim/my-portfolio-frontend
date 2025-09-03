@@ -110,7 +110,7 @@ const Hero = () => {
           <img
             src={image}
             alt="Profile"
-            className="w-full h-full object-cover"
+            className="object-cover"
           />
         </motion.div>
       </motion.div>

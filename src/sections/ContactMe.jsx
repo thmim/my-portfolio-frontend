@@ -87,7 +87,7 @@ const ContactMe = () => {
           </div>
           {/* Resume Button */}
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/file/d/18GQwiYpKGa0FE_T2mbRKO_1AWSwQW3_T/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#00C6FF] to-[#0072FF] rounded-lg font-semibold hover:scale-105 transition-transform duration-300"
